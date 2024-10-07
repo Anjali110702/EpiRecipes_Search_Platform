@@ -1,7 +1,12 @@
 from flask import Flask, request, jsonify
 from opensearchpy import OpenSearch
+from flask_cors import CORS  # Import CORS
 
 app = Flask(__name__)
+
+# Enable CORS for all routes
+CORS(app, origins=["http://localhost:3000"])
+
 
 # OpenSearch client
 client = OpenSearch(
@@ -12,6 +17,7 @@ INDEX_NAME = "epirecipes"
 
 # Route for searching recipes
 @app.route('/search', methods=['GET'])
+
 def search_recipes():
     query = request.args.get('q', '')
     page = int(request.args.get('page', 1))
@@ -32,34 +38,17 @@ def search_recipes():
     # Perform search
     response = client.search(index=INDEX_NAME, body=search_query)
     results = [hit["_source"] for hit in response["hits"]["hits"]]
+
+    # Remove duplicates from results
+    unique_titles = set()
+    unique_results = []
+    for result in results:
+        if result["title"] not in unique_titles:
+            unique_titles.add(result["title"])
+            unique_results.append(result)
     
     return jsonify({
-        "results": results,
-        "total": response["hits"]["total"]["value"]
-    })
-
-# Route for filtering recipes
-@app.route('/filter', methods=['GET'])
-def filter_recipes():
-    category = request.args.get('category', None)
-    cuisine = request.args.get('cuisine', None)
-    prep_time = request.args.get('prep_time', None)
-
-    filter_query = {"bool": {"must": []}}
-
-    if category:
-        filter_query["bool"]["must"].append({"match": {"categories": category}})
-    if cuisine:
-        filter_query["bool"]["must"].append({"match": {"cuisine": cuisine}})
-    if prep_time:
-        filter_query["bool"]["must"].append({"range": {"prep_time": {"lte": prep_time}}})
-
-    # Perform the filter search
-    response = client.search(index=INDEX_NAME, body={"query": filter_query})
-    results = [hit["_source"] for hit in response["hits"]["hits"]]
-    
-    return jsonify({
-        "results": results,
+        "results": unique_results,
         "total": response["hits"]["total"]["value"]
     })
 
