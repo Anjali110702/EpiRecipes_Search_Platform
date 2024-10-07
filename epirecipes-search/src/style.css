@@ -1,0 +1,63 @@
+/* Styling for the main body container */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Center body content vertically */
+    background: linear-gradient(rgb(2, 2, 22), rgb(27, 27, 104), rgb(105, 105, 233));
+    margin: 0;
+    /* Ensure there's no margin affecting the layout */
+}
+
+/* Center content */
+.container {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Center content within the container */
+    text-align: center;
+    height: calc(100vh - 100px);
+    /* Adjust height to account for the navbar */
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 3rem;
+    /* Adjust font size as needed */
+    color: white;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

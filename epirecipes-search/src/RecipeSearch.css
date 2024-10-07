@@ -12,8 +12,24 @@
 
 .filters {
     display: flex;
+    /* Change from 'display: 20px' to 'display: flex' */
+    flex-wrap: wrap;
+    /* Allows filters to wrap if they exceed container width */
     gap: 10px;
+    /* Adds space between filters */
     margin-bottom: 20px;
+}
+
+.filters input {
+    width: 150px;
+    /* Set a fixed width for filter inputs to keep them compact */
+    padding: 5px;
+    /* Add some padding for better usability */
+}
+
+.btn {
+    padding: 5px 10px;
+    /* Make buttons a bit smaller */
 }
 
 .recipe-card {

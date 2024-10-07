@@ -46,13 +46,7 @@ const RecipeSearch = () => {
           placeholder="Category"
           className="form-control"
         />
-        <input 
-          type="text"
-          value={filters.cuisine}
-          onChange={(e) => setFilters({ ...filters, cuisine: e.target.value })}
-          placeholder="Cuisine"
-          className="form-control"
-        />
+        
         <button onClick={handleFilter} className="btn btn-success">Apply Filters</button>
       </div>
 

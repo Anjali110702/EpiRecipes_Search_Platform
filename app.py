@@ -15,9 +15,9 @@ client = OpenSearch(
 
 INDEX_NAME = "epirecipes"
 
+
 # Route for searching recipes
 @app.route('/search', methods=['GET'])
-
 def search_recipes():
     query = request.args.get('q', '')
     page = int(request.args.get('page', 1))
