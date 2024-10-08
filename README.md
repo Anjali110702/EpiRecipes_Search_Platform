@@ -107,6 +107,7 @@ Follow these steps to set up the project locally.
 Once both the backend and frontend are running, you can visit `http://localhost:3000` in your web browser to use the EpiRecipes Search Platform. From here, you can search for recipes, filter by categories or calories, and explore different recipes with ease.
 
 ## Youtube Demo Link : 
+https://youtu.be/41KAzpqiIi4
 
 ## Contributing
 
