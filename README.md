@@ -78,7 +78,7 @@ Follow these steps to set up the project locally.
 4. **Index the Dataset**:
    Index the recipe dataset into OpenSearch by running the indexing script:
    ```bash
-   python index_data.py
+   python index_large_recipes.py
    ```
 
 ### Frontend Setup (React)
