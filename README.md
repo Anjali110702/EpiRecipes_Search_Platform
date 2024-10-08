@@ -57,7 +57,7 @@ Follow these steps to set up the project locally.
 
 1. **Clone the Repository**:
    ```bash
-  [ git clone https://github.com/your-username/epirecipes-search-platform.git](https://github.com/Anjali110702/EpiRecipes_Search_Platform.git)
+   https://github.com/Anjali110702/EpiRecipes_Search_Platform.git
    cd epirecipes-search-platform
    ```
 
