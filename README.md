@@ -68,20 +68,14 @@ Follow these steps to set up the project locally.
    ```
    OpenSearch should now be running at `http://localhost:9200`.
 
-3. **Install Python Dependencies**:
-    Install the required Python packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the Flask Server**:
+3. **Run the Flask Server**:
    Once dependencies are installed, start the Flask server:
    ```bash
    python app.py
    ```
    The backend will run on `http://localhost:5000`.
 
-5. **Index the Dataset**:
+4. **Index the Dataset**:
    Index the recipe dataset into OpenSearch by running the indexing script:
    ```bash
    python index_data.py
