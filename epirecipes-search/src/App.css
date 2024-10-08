@@ -53,7 +53,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: linear-gradient(rgb(2, 2, 22), rgb(27, 27, 104), rgb(105, 105, 233));
+  /* background-image: url('https: //images.unsplash.com/photo-1601315379734-425a469078de?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') */
 }
 
 /* Stylish NavBar */
@@ -61,7 +61,7 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 149, 255, 0.7);
+  background-color: rgb(6, 6, 6);
   z-index: 10;
   padding: 10px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -70,10 +70,9 @@ nav {
 
 /* Nav bar transitions on scroll */
 nav:hover {
-  background-color: rgba(0, 149, 255, 0.9);
+  background-color: rgba(50, 51, 52, 0.9);
 }
 
-/* Center the nav links and add space between */
 nav ul {
   display: flex;
   justify-content: center;
@@ -81,7 +80,6 @@ nav ul {
   padding: 0;
 }
 
-/* Style each nav item */
 nav ul li {
   margin-right: 20px;
   list-style: none;
@@ -94,7 +92,6 @@ nav ul li:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the links */
 nav a {
   text-decoration: none;
   color: #fff;
@@ -105,23 +102,20 @@ nav a {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Link hover effect */
 nav a:hover {
-  background-color: #fff;
-  color: #0066cc;
+  color: #ffcc00;
+    text-shadow: 0px 0px 8px rgba(255, 204, 0, 0.8);
 }
 
-/* Main container styling */
+
 .container {
   max-width: 1400px;
   width: 100%;
   margin-top: 80px;
-  /* Prevent overlap with the fixed/sticky navbar */
   padding: 20px;
   margin-bottom: 800px;
 }
 
-/* Add animation to container fade-in effect */
 .container {
   animation: fadeIn 1s ease-in-out;
 }
@@ -138,12 +132,8 @@ nav a:hover {
   }
 }
 
-/* Make navbar fully visible on hover */
-nav:hover {
-  background-color: rgba(0, 149, 255, 0.85);
-}
 
-/* Mobile view */
+
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
