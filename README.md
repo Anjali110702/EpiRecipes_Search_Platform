@@ -69,9 +69,8 @@ Follow these steps to set up the project locally.
    OpenSearch should now be running at `http://localhost:9200`.
 
 3. **Install Python Dependencies**:
-   Navigate to the backend folder and install the required Python packages:
+    Install the required Python packages:
    ```bash
-   cd backend
    pip install -r requirements.txt
    ```
 
@@ -93,7 +92,7 @@ Follow these steps to set up the project locally.
 1. **Navigate to the Frontend Folder**:
    In your terminal, navigate to the React project directory:
    ```bash
-   cd ../frontend
+   cd epirecipes_search
    ```
 
 2. **Install Dependencies**:
@@ -113,13 +112,6 @@ Follow these steps to set up the project locally.
 
 Once both the backend and frontend are running, you can visit `http://localhost:3000` in your web browser to use the EpiRecipes Search Platform. From here, you can search for recipes, filter by categories or calories, and explore different recipes with ease.
 
-## Screenshots
-
-Include screenshots of your project to give users a visual of what the platform looks like. Here’s an example of how to format them:
-
-![Home Page](screenshots/homepage.png)
-
-![Search Results](screenshots/search-results.png)
 
 ## Contributing
 
